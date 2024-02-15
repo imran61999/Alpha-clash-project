@@ -10,6 +10,27 @@
 //     // console.log(playGround.classList);
 // }
 
+function handlekeyboardbuttonpress(event){
+    const playerpressed = event.key;
+    console.log("payer pressed " , playerpressed);
+
+    // get the expected to pressed
+    const currentAlphabateelement =document.getElementById('currente-alphabate')
+    const currentAlphabet = currentAlphabateelement.innerText;
+    const expectedAlphabat = currentAlphabet.toLowerCase();
+    console.log(playerpressed ,expectedAlphabat);
+
+    // check matched or not
+    if(playerpressed === expectedAlphabat){
+        console.log('You get a point');
+    }
+    else{
+        console.log("You lossed your game");
+    }
+}
+
+document.addEventListener('keyup', handlekeyboardbuttonpress);
+
 function continuegame(){
     //step-1 : genarate a random alphabat 
 
